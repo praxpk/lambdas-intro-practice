@@ -1,0 +1,17 @@
+[project]
+name = "lambda-intros"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "boto3>=1.43.36",
+]
+# To ignore specific libraries
+[[tool.mypy.overrides]]
+module = [ "library_name", "another_library" ]
+ignore_missing_imports = true
+
+# To ignore ALL untyped third-party libraries globally
+[tool.mypy]
+ignore_missing_imports = true
